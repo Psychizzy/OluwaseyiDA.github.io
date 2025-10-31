@@ -5,9 +5,9 @@
 
 I’m a Data Analyst transitioning into Data Science, with a background in **Psychology** and a passion for uncovering insights through data.
 
-With a BSc in Psychology, I bring a human-centered approach to data interpretation — blending behavioral understanding with analytical thinking. My toolkit includes **Power BI, SQL, Excel, and Python**, which I use to turn raw data into strategic, actionable insights.
+With a BSc in Psychology, I bring a human-centered approach to data interpretation  blending behavioral understanding with analytical thinking. My toolkit includes **Power BI, SQL, Excel, and Python**, which I use to turn raw data into strategic, actionable insights.
 
-I’m currently expanding my expertise into machine learning and advanced analytics. Beyond tools and tech, I value clarity and storytelling — making complex data understandable and impactful.
+I’m currently expanding my expertise into machine learning and advanced analytics. Beyond tools and tech, I value clarity and storytelling  making complex data understandable and impactful.
 
 ---
 
