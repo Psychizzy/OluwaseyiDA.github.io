@@ -1,4 +1,4 @@
-<img src="headshot.jpg" alt="Ajayi Oluwaseyi Headshot" width="180" style="border-radius: 50%; margin-bottom: 20px;" />
+<img src="headshot.jpg" alt="Ajayi Oluwaseyi Headshot" width="230" style="border-radius: 55%; margin-bottom: 25px;" />
 
 # 👋 Hi, I’m Ajayi Oluwaseyi
 ### Data Analyst | BI Specialist | SQL | Power BI | Excel | Python
