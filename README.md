@@ -1,3 +1,5 @@
+# ![Ajayi Oluwaseyi](headshot.jpg)
+
 # 👋 Hi, I’m Ajayi Oluwaseyi
 ### Data Analyst | BI Specialist | SQL | Power BI | Excel | Python
 
@@ -11,30 +13,85 @@ I’m currently expanding my expertise into machine learning and advanced analyt
 
 ## 🧩 Featured Projects
 
-### 🏢 [Tenant Retention Optimization (Power BI)](https://github.com/Psychizzy/RealEstate-Tenant-Retention-Optimization)
-An interactive Power BI dashboard for **HomeVibe Properties**, analyzing tenant churn, lease renewals, and satisfaction to drive retention strategies.
+---
 
-### 🏨 [Airbnb NYC Market Analysis (Power BI)](https://github.com/Psychizzy/Airbnb-NYC-Data-Analysis-)
-Explored **pricing trends, host performance, and availability** across NYC using Power BI and DAX. Produced business recommendations for hosts and stakeholders.
+### 🏢 Tenant Retention Optimization | Power BI
+![Tenant Retention Dashboard](tenant_retention_dashboard.jpg)
 
-### 📦 [Excel Backlog Dashboard](https://github.com/Psychizzy/EXCEL-BACKLOGS-ANALYSIS)
-An Excel-based dashboard that tracks **order fulfillment, driver performance, and backlog trends**, improving logistics efficiency.
+An interactive **Power BI dashboard** for *HomeVibe Properties* that analyzes tenant churn, lease renewals, and satisfaction metrics to improve customer retention.
 
-### 🧮 [Customer Analytics (SQL)](https://github.com/Psychizzy/Customer-Analytics-SQL-Project)
-Performed **customer segmentation, churn prediction, and RFM analysis** using SQL. Provided data-backed marketing and retention insights.
+**Highlights:**
+- 4-page dashboard covering churn, rent renewal, and satisfaction
+- Advanced DAX for renewal rate and satisfaction segmentation
+- Action-driven insights for management decision-making  
 
-### 📈 [Customer Cohort & Retention (Power BI)](https://github.com/Psychizzy/customer-cohort-retention-powerbi)
-Advanced DAX-driven **Cohort Retention & RFM Segmentation Dashboard** with clear storytelling and executive insights.
+📂 [View on GitHub →](https://github.com/Psychizzy/RealEstate-Tenant-Retention-Optimization)
+
+---
+
+### 🏨 Airbnb NYC Market Analysis | Power BI
+![Airbnb Dashboard](airbnb_dashboard.jpg)
+
+Analyzed **Airbnb listings across New York City**, visualizing key insights on pricing, host performance, availability, and neighborhood trends.
+
+**Highlights:**
+- Pricing distribution across boroughs  
+- Occupancy rates and host rankings  
+- Seasonality & dynamic slicers for neighborhood-level insights  
+
+📂 [View on GitHub →](https://github.com/Psychizzy/Airbnb-NYC-Data-Analysis-)
+
+---
+
+### 📦 Excel Backlog Dashboard | Excel
+![Excel Backlog Dashboard](excel_backlog_dashboard.jpg)
+
+A clean and functional **Excel dashboard** built to track order fulfillment and delivery efficiency, enabling management to identify bottlenecks and improve operations.
+
+**Highlights:**
+- Tracks order volume, driver performance, and delivery backlog  
+- Includes KPI panels and trend visualizations  
+- Automated with formulas and PivotTables  
+
+📂 [View on GitHub →](https://github.com/Psychizzy/EXCEL-BACKLOGS-ANALYSIS)
+
+---
+
+### 🧮 Customer Analytics (SQL)
+![Customer Analytics Screenshot](customer_sql_query.jpg)
+
+SQL-based **Customer Analytics Project** exploring segmentation, churn, and revenue growth through customer-level transaction data.
+
+**Highlights:**
+- Retention and cohort segmentation  
+- Revenue and customer churn queries  
+- Delivered insights for marketing & customer success teams  
+
+📂 [View on GitHub →](https://github.com/Psychizzy/Customer-Analytics-SQL-Project)
+
+---
+
+### 📈 Customer Cohort & Retention Analysis | Power BI
+![Cohort Dashboard](customer_cohort_dashboard.jpg)
+
+A data storytelling dashboard that explores **Cohort Retention, RFM Segmentation, and Lifetime Value** to visualize customer behavior and engagement trends.
+
+**Highlights:**
+- Interactive retention heatmaps and cohort tables  
+- RFM-based segmentation and KPI cards  
+- Executive summary for business stakeholders  
+
+📂 [View on GitHub →](https://github.com/Psychizzy/customer-cohort-retention-powerbi)
 
 ---
 
 ## ⚙️ Skills & Tools
 
-**Languages:** SQL | Python  
-**Visualization:** Power BI | Excel | Tableau  
-**Database:** MySQL | PostgreSQL  
-**Analytics:** DAX | Pivot Tables | ETL | Data Cleaning | RFM | Cohort Analysis  
-**Soft Skills:** Storytelling | Presentation | Problem Solving  
+**Languages: |** SQL | Python  
+**Visualization: |** Power BI | Excel | Tableau  
+**Database: |** MySQL | PostgreSQL  
+**Analytics: |** DAX | Pivot Tables | ETL | Data Cleaning | RFM | Cohort Analysis  
+**Soft Skills: |** Storytelling | Presentation | Problem Solving  
 
 ---
 
