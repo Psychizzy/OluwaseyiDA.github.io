@@ -1,4 +1,4 @@
-# ![Ajayi Oluwaseyi](headshot.jpg)
+<img src="headshot.jpg" alt="Ajayi Oluwaseyi Headshot" width="180" style="border-radius: 50%; margin-bottom: 20px;" />
 
 # 👋 Hi, I’m Ajayi Oluwaseyi
 ### Data Analyst | BI Specialist | SQL | Power BI | Excel | Python
@@ -16,7 +16,7 @@ I’m currently expanding my expertise into machine learning and advanced analyt
 ---
 
 ### 🏢 Tenant Retention Optimization | Power BI
-![Tenant Retention Dashboard](tenant_retention_dashboard.jpg)
+<img src="tenant_retention_dashboard.png" alt="Tenant Retention Power BI Dashboard" width="800" style="border-radius: 10px; margin-bottom: 10px;" />
 
 An interactive **Power BI dashboard** for *HomeVibe Properties* that analyzes tenant churn, lease renewals, and satisfaction metrics to improve customer retention.
 
@@ -30,7 +30,7 @@ An interactive **Power BI dashboard** for *HomeVibe Properties* that analyzes te
 ---
 
 ### 🏨 Airbnb NYC Market Analysis | Power BI
-![Airbnb Dashboard](airbnb_dashboard.jpg)
+<img src="airbnb_dashboard.png" alt="Airbnb NYC Dashboard" width="800" style="border-radius: 10px; margin-bottom: 10px;" />
 
 Analyzed **Airbnb listings across New York City**, visualizing key insights on pricing, host performance, availability, and neighborhood trends.
 
@@ -44,7 +44,7 @@ Analyzed **Airbnb listings across New York City**, visualizing key insights on p
 ---
 
 ### 📦 Excel Backlog Dashboard | Excel
-![Excel Backlog Dashboard](excel_backlog_dashboard.jpg)
+<img src="excel_backlog_dashboard.jpg" alt="Excel Backlog Dashboard" width="800" style="border-radius: 10px; margin-bottom: 10px;" />
 
 A clean and functional **Excel dashboard** built to track order fulfillment and delivery efficiency, enabling management to identify bottlenecks and improve operations.
 
@@ -58,7 +58,7 @@ A clean and functional **Excel dashboard** built to track order fulfillment and 
 ---
 
 ### 🧮 Customer Analytics (SQL)
-![Customer Analytics Screenshot](customer_sql_query.jpg)
+<img src="customer_sql_query.png" alt="Customer Analytics SQL Query" width="800" style="border-radius: 10px; margin-bottom: 10px;" />
 
 SQL-based **Customer Analytics Project** exploring segmentation, churn, and revenue growth through customer-level transaction data.
 
@@ -72,7 +72,7 @@ SQL-based **Customer Analytics Project** exploring segmentation, churn, and reve
 ---
 
 ### 📈 Customer Cohort & Retention Analysis | Power BI
-![Cohort Dashboard](customer_cohort_dashboard.jpg)
+<img src="customer_cohort_dashboard.png" alt="Customer Cohort Retention Dashboard" width="800" style="border-radius: 10px; margin-bottom: 10px;" />
 
 A data storytelling dashboard that explores **Cohort Retention, RFM Segmentation, and Lifetime Value** to visualize customer behavior and engagement trends.
 
@@ -87,11 +87,11 @@ A data storytelling dashboard that explores **Cohort Retention, RFM Segmentation
 
 ## ⚙️ Skills & Tools
 
-**Languages: |** SQL | Python  
-**Visualization: |** Power BI | Excel | Tableau  
-**Database: |** MySQL | PostgreSQL  
-**Analytics: |** DAX | Pivot Tables | ETL | Data Cleaning | RFM | Cohort Analysis  
-**Soft Skills: |** Storytelling | Presentation | Problem Solving  
+**Languages:** | SQL | Python  
+**Visualization:** | Power BI | Excel | Tableau  
+**Database:** | MySQL | PostgreSQL  
+**Analytics:** | DAX | Pivot Tables | ETL | Data Cleaning | RFM | Cohort Analysis  
+**Soft Skills:** | Storytelling | Presentation | Problem Solving  
 
 ---
 
