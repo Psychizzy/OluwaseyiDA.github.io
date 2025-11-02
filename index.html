@@ -185,20 +185,19 @@
 </div>
   </div>
 
-  <script>
-    const btn = document.getElementById('theme-toggle');
-    btn.addEventListener('click', () => {
-      document.body.dataset.theme = document.body.dataset.theme === 'dark' ? '' : 'dark';
-    });
-  </script>
-  <button id="mode-toggle">Toggle Mode</button>
-
 <script>
-  const toggleBtn = document.getElementById("mode-toggle");
-  toggleBtn.addEventListener("click", () => {
-    document.body.classList.toggle("light-mode");
+  const toggleSwitch = document.getElementById('mode-switch');
+  const body = document.body;
+
+  toggleSwitch.addEventListener('change', () => {
+    if (toggleSwitch.checked) {
+      body.classList.add('light-mode');
+    } else {
+      body.classList.remove('light-mode');
+    }
   });
 </script>
+
 
 </body>
 </html>
