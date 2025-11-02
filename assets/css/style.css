@@ -1,43 +1,23 @@
 /* === RESET & BASE === */
-body {
+* {
+  box-sizing: border-box;
   margin: 0;
+  padding: 0;
+}
+
+body {
   font-family: 'Segoe UI', Roboto, sans-serif;
-  background-color: #0e1628;
-  color: #e8e8e8;
-  transition: background-color 0.4s ease, color 0.4s ease;
+  background-color: #0d1b2a; /* Default dark navy */
+  color: #e0e0e0;
+  transition: background-color 0.5s ease, color 0.5s ease;
+  line-height: 1.6;
+  padding: 40px;
 }
 
 /* === LIGHT MODE === */
 body.light-mode {
   background-color: #ffffff;
-  color: #222;
-}
-
-/* === CONTAINER === */
-#content {
-  max-width: 900px;
-  margin: 50px auto;
-  padding: 30px;
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 16px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
-  transition: background 0.4s ease;
-}
-
-body.light-mode #content {
-  background: #fdfdfd;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
-}
-
-/* === HEADSHOT === */
-img[alt*="Headshot"] {
-  display: block;
-  margin: 0 auto 25px auto;
-  width: 180px;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 3px solid #1e90ff;
+  color: #111;
 }
 
 /* === TOGGLE SWITCH === */
@@ -45,21 +25,26 @@ img[alt*="Headshot"] {
   position: fixed;
   top: 20px;
   right: 25px;
-  z-index: 9999;
+  z-index: 1000;
 }
+
 .switch {
   position: relative;
   display: inline-block;
   width: 55px;
   height: 30px;
 }
+
 .switch input {
-  display: none;
+  opacity: 0;
+  width: 0;
+  height: 0;
 }
+
 .slider {
   position: absolute;
   cursor: pointer;
-  background-color: #ccc;
+  background-color: #555;
   border-radius: 30px;
   top: 0;
   left: 0;
@@ -67,6 +52,7 @@ img[alt*="Headshot"] {
   bottom: 0;
   transition: .4s;
 }
+
 .slider:before {
   position: absolute;
   content: "";
@@ -78,40 +64,98 @@ img[alt*="Headshot"] {
   border-radius: 50%;
   transition: .4s;
 }
+
 input:checked + .slider {
-  background-color: #1e90ff;
+  background-color: #0077b6;
 }
+
 input:checked + .slider:before {
   transform: translateX(26px);
 }
 
-/* === LINK STYLING === */
+/* === CONTAINER === */
+#content {
+  max-width: 900px;
+  margin: 100px auto 60px auto;
+  padding: 30px;
+  text-align: center;
+}
+
+/* === HEADER === */
+h1 {
+  font-size: 2.8em;
+  color: #00b4d8;
+  margin-bottom: 20px;
+}
+
+/* === HEADSHOT === */
+#headshot {
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 30px auto;
+  border: 5px solid #00b4d8;
+  box-shadow: 0 0 25px rgba(0, 180, 216, 0.6);
+}
+
+/* === LINKS === */
 a {
-  color: #1e90ff;
+  color: #00b4d8;
   text-decoration: none;
   font-weight: 600;
   transition: color 0.3s ease;
 }
+
 a:hover {
-  color: #63b3ed;
+  color: #90e0ef;
+  text-decoration: underline;
 }
 
-/* === HEADINGS === */
-h1, h2, h3 {
+/* === LIGHT MODE LINKS === */
+body.light-mode a {
+  color: #0077b6;
+}
+
+/* === SECTION TITLES === */
+h2 {
+  color: #00b4d8;
+  margin-top: 40px;
   text-align: center;
-  color: #1e90ff;
-  margin-bottom: 20px;
 }
 
 /* === PROJECT IMAGES === */
-img[alt*="Dashboard"] {
+img.project {
   display: block;
-  margin: 10px auto;
+  margin: 20px auto;
   border-radius: 10px;
   max-width: 100%;
+  box-shadow: 0 0 18px rgba(0,0,0,0.4);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-img[alt*="Dashboard"]:hover {
+
+img.project:hover {
   transform: scale(1.03);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 25px rgba(0, 180, 216, 0.4);
+}
+
+/* === QUOTE === */
+blockquote {
+  font-style: italic;
+  color: #a9d6e5;
+  border-left: 4px solid #00b4d8;
+  padding-left: 12px;
+  margin: 25px auto;
+  max-width: 80%;
+}
+
+/* === ANIMATION (OPTIONAL) === */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+h1, #headshot {
+  animation: fadeIn 1.2s ease;
 }
