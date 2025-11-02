@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="stylesheet" href="assets/css/style.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ajayi Oluwaseyi Portfolio</title>
@@ -184,6 +185,15 @@
       document.body.dataset.theme = document.body.dataset.theme === 'dark' ? '' : 'dark';
     });
   </script>
+  <button id="mode-toggle">Toggle Mode</button>
+
+<script>
+  const toggleBtn = document.getElementById("mode-toggle");
+  toggleBtn.addEventListener("click", () => {
+    document.body.classList.toggle("light-mode");
+  });
+</script>
+
 </body>
 </html>
 
