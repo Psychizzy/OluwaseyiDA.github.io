@@ -34,14 +34,21 @@ h1 {
 /* Headshot */
 img[alt~="Headshot"] {
   display: block;
-  margin: 0 auto 20px auto;
-  width: 220px;
-  height: 220px;
+  margin: 0 auto 25px auto;
+  width: 260px;          /* Slightly larger */
+  height: 260px;
   object-fit: cover;
-  border-radius: 50%;
-  border: 3px solid #4fd1c5;
-  box-shadow: 0 0 25px rgba(79,209,197,0.6);
+  border-radius: 50%;    /* Perfect circle */
+  border: 4px solid #4fd1c5;
+  box-shadow: 0 0 25px rgba(79, 209, 197, 0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+img[alt~="Headshot"]:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 35px rgba(79, 209, 197, 0.8);
+}
+
 
 /* Links */
 a {
