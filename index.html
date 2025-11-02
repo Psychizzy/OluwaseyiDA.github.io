@@ -186,18 +186,11 @@
   </div>
 
 <script>
-  const toggleSwitch = document.getElementById('mode-switch');
-  const body = document.body;
-
-  toggleSwitch.addEventListener('change', () => {
-    if (toggleSwitch.checked) {
-      body.classList.add('light-mode');
-    } else {
-      body.classList.remove('light-mode');
-    }
+  const toggle = document.getElementById("theme-toggle");
+  toggle.addEventListener("click", () => {
+    document.body.classList.toggle("light-mode");
   });
 </script>
-
 
 </body>
 </html>
