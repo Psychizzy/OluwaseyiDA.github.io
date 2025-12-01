@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ajayi Oluwaseyi | Data Analyst Portfolio</title>
   <link rel="stylesheet" href="assets/css/style.css">
+
   <style>
     :root {
       --primary: #00e6f6;
@@ -27,7 +28,7 @@
       color: var(--text-dark);
     }
 
-    /* === NAVBAR === */
+    /* NAVBAR */
     nav {
       background: rgba(5, 10, 20, 0.9);
       display: flex;
@@ -39,18 +40,20 @@
       z-index: 999;
       box-shadow: 0 2px 8px rgba(0,188,212,0.2);
     }
+
     nav a {
       color: var(--primary);
       font-weight: 600;
       text-transform: uppercase;
       transition: color 0.3s, transform 0.3s;
     }
+
     nav a:hover {
       color: #05d5f3;
       transform: translateY(-2px);
     }
 
-    /* === HEADSHOT === */
+    /* HEADSHOT */
     #headshot {
       display: block;
       margin: 40px auto 25px auto;
@@ -61,6 +64,7 @@
       border: 4px solid var(--primary);
       transition: transform 0.4s ease, box-shadow 0.4s ease;
     }
+
     #headshot:hover {
       transform: scale(1.08);
       box-shadow: 0 0 25px rgba(0, 230, 246, 0.4);
@@ -84,20 +88,21 @@
       font-size: 1.05rem;
     }
 
-    /* === PROJECT IMAGES === */
-    img[alt*="Dashboard"], img[alt*="Query"] {
+    /* PROJECT IMAGES */
+    img.project-img {
       display: block;
       margin: 20px auto;
       border-radius: 10px;
       max-width: 100%;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
-    img[alt*="Dashboard"]:hover, img[alt*="Query"]:hover {
+
+    img.project-img:hover {
       transform: scale(1.03);
       box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
     }
 
-    /* === TOGGLE BUTTON === */
+    /* TOGGLE BUTTON */
     #theme-toggle {
       position: fixed;
       top: 15px;
@@ -112,139 +117,206 @@
       transition: background 0.3s, transform 0.3s;
       z-index: 1000;
     }
+
     #theme-toggle:hover {
       transform: scale(1.1);
       background-color: #05d5f3;
     }
 
+    /* ANIMATION */
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
     }
-
   </style>
 </head>
+
 <body>
 
-  <button id="theme-toggle">🌙 Toggle Mode</button>
+<button id="theme-toggle">🌙 Toggle Mode</button>
 
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#projects">Projects</a>
-    <a href="#skills">Skills</a>
-    <a href="#services">Services</a>
-    <a href="#contact">Contact</a>
-  </nav>
+<nav>
+  <a href="#home">Home</a>
+  <a href="#projects">Projects</a>
+  <a href="#skills">Skills</a>
+  <a href="#services">Services</a>
+  <a href="#contact">Contact</a>
+</nav>
 
-  <!-- === HOME / ABOUT SECTION === -->
-  <section id="home">
-    <h1>👋 Hi, I’m Ajayi Oluwaseyi</h1>
-    <img id="headshot" src="headshot.jpg" alt="Ajayi Oluwaseyi Headshot">
-    <p style="text-align:center;">
-      I’m a <strong>Data Analyst</strong> with a background in <strong>Psychology</strong> — a unique blend that allows me to 
-      understand not just <em>what</em> the data says, but <em>why</em> it behaves that way.  
-      My approach to analytics is rooted in human behavior and decision science — combining statistical reasoning with a 
-      deep understanding of people, motivation, and perception.  
-      This human-centered perspective enables me to translate data patterns into actionable business insights and 
-      data-driven stories that inspire impact.
+<!-- HOME -->
+<section id="home">
+  <h1>👋 Hi, I’m Ajayi Oluwaseyi</h1>
+  <img id="headshot" src="headshot.jpg" alt="Ajayi Oluwaseyi Headshot">
+
+  <p style="text-align:center;">
+    I’m a <strong>Data Analyst</strong> with a foundation in <strong>Psychology</strong>, combining 
+    human-centered reasoning with analytical precision.  
+    My background helps me translate complex datasets into business-ready insights that reflect 
+    real customer behavior, motivations, and decision patterns.  
+    I specialize in building dashboards, automating analysis, and uncovering insights that drive 
+    measurable business impact and smarter decisions.
+  </p>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <h2>Portfolio Projects</h2>
+
+  <!-- 1. TENANT RETENTION -->
+  <div>
+    <h3>🏢 Tenant Retention Optimization | Power BI</h3>
+    <img class="project-img" src="tenant_retention_dashboard.png" alt="Tenant Retention Dashboard">
+    <p>
+      A retention intelligence dashboard for a real-estate company analyzing tenant churn, 
+      satisfaction, and lease renewal patterns.  
+      The project helps property managers identify high-risk tenants, understand factors driving 
+      dissatisfaction, and forecast revenue at risk.  
+      It supports proactive decision-making with measurable retention interventions and operational 
+      improvements.
+      <br><a href="https://github.com/Psychizzy/RealEstate-Tenant-Retention-Optimization">🔗 View on GitHub</a>
     </p>
-  </section>
+  </div>
 
-  <!-- === PROJECTS SECTION === -->
-  <section id="projects">
-    <h2> Portfolio Projects</h2>
-
-    <div>
-      <h3>🏢 Tenant Retention Optimization | Power BI</h3>
-      <img src="tenant_retention_dashboard.png" alt="Tenant Retention Power BI Dashboard">
-      <p>
-        A Power BI dashboard analyzing tenant churn, satisfaction, and lease renewals for actionable retention strategies.
-        <br><a href="https://github.com/Psychizzy/RealEstate-Tenant-Retention-Optimization">🔗 View on GitHub</a>
-      </p>
-    </div>
-
-    <div>
-      <h3>🏨 Airbnb NYC Market Analysis | Power BI</h3>
-      <img src="airbnb_dashboard.png" alt="Airbnb NYC Dashboard">
-      <p>
-        Insights into Airbnb listings across NYC — pricing, occupancy, and host performance visualized.
-        <br><a href="https://github.com/Psychizzy/Airbnb-NYC-Data-Analysis-">🔗 View on GitHub</a>
-      </p>
-    </div>
-
-    <div>
-      <h3>📦 Excel Backlog Dashboard | Excel</h3>
-      <img src="excel_backlog_dashboard.jpg" alt="Excel Backlog Dashboard">
-      <p>
-        An Excel dashboard to monitor fulfillment rates and backlog trends for operational efficiency.
-        <br><a href="https://github.com/Psychizzy/EXCEL-BACKLOGS-ANALYSIS">🔗 View on GitHub</a>
-      </p>
-    </div>
-
-    <div>
-      <h3>🧮 Customer Analytics (SQL)</h3>
-      <img src="customer_sql_query.png" alt="Customer Analytics SQL Query">
-      <p>
-        SQL project uncovering customer behavior, segmentation, and churn insights using real data.
-        <br><a href="https://github.com/Psychizzy/Customer-Analytics-SQL-Project">🔗 View on GitHub</a>
-      </p>
-    </div>
-
-    <div>
-      <h3>📈 Customer Cohort & Retention Analysis | Power BI</h3>
-      <img src="customer_cohort_dashboard.png" alt="Customer Cohort Retention Dashboard">
-      <p>
-        Power BI dashboard visualizing customer retention, RFM segmentation, and LTV metrics.
-        <br><a href="https://github.com/Psychizzy/customer-cohort-retention-powerbi">🔗 View on GitHub</a>
-      </p>
-    </div>
-  </section>
-
-  <!-- === SKILLS SECTION === -->
-  <section id="skills">
-    <h2>⚙️ Skills & Tools</h2>
-    <p style="text-align:center;">
-      <strong>Languages:</strong> SQL | Python<br>
-      <strong>Visualization:</strong> Power BI | Excel | Tableau<br>
-      <strong>Database:</strong> MySQL | PostgreSQL<br>
-      <strong>Analytics:</strong> DAX | Pivot Tables | ETL | DML MySql Queries<br>
-      <strong>Soft Skills:</strong> Communication | Storytelling | Business Understanding | 
-      Analytical Thinking | Problem Solving | Attention to Detail | Data-driven Decision Making | Empathy & Human Insight
+  <!-- 2. **NEW PROJECT INSERTED HERE** -->
+  <div>
+    <h3>🥤 Soft Drink Market Insight – Alimosho, Lagos | Power BI</h3>
+    <img class="project-img" src="page1_overview.png" alt="Soft Drink Market Dashboard">
+    <p>
+      A full market-mapping and distribution intelligence dashboard built from field survey data.  
+      The report uncovers product availability, brand dominance, packaging preference, outlet 
+      performance, and geographical hotspots across Alimosho.  
+      It provides actionable insights that help distributors optimize re-supply frequency, improve 
+      stock reliability, expand into underserved coldspots, and tailor packaging strategy by outlet 
+      type.
+      <br><a href="https://github.com/Psychizzy/Soft-Drink-Market-Insight-Alimosho-Lagos">🔗 View on GitHub</a>
     </p>
-  </section>
+  </div>
 
-  <!-- === SERVICES SECTION === -->
-  <section id="services">
-    <h2>💼 Services I Offer</h2>
-    <ul style="max-width:700px; margin:auto; line-height:1.8;">
-      <li>Data Cleaning & Transformation (ETL)</li>
-      <li>Dashboard Design & Development (Power BI, Excel)</li>
-      <li>SQL Data Analysis & Reporting</li>
-      <li>Predictive & Behavioral Analytics</li>
-      <li>Data Storytelling & Business Insights</li>
-      <li>KPI Tracking & Executive Reporting</li>
-    </ul>
-  </section>
-
-  <!-- === CONTACT SECTION === -->
-  <section id="contact">
-    <h2>📬 Contact</h2>
-    <p style="text-align:center;">
-      📧 <a href="mailto:oluwaseyi1414@gmail.com">oluwaseyi1414@gmail.com</a><br>
-      🔗 <a href="https://www.linkedin.com/in/ajayi-oluwaseyi-865a35248">LinkedIn</a><br>
-      🐦 <a href="https://twitter.com/Psychizzy1414">Twitter</a><br>
-      📞 +2349035283723
+  <!-- 3. AIRBNB -->
+  <div>
+    <h3>🏨 Airbnb NYC Market Analysis | Power BI</h3>
+    <img class="project-img" src="airbnb_dashboard.png" alt="Airbnb NYC Dashboard">
+    <p>
+      A market intelligence dashboard analyzing price patterns, occupancy behavior, host 
+      performance, and neighborhood competitiveness across NYC.  
+      This project empowers property owners and investors to make pricing decisions, maximize 
+      occupancy, and identify high-performing locations.  
+      It reveals revenue opportunities, booking patterns, and neighborhood-level demand insights.
+      <br><a href="https://github.com/Psychizzy/Airbnb-NYC-Data-Analysis-">🔗 View on GitHub</a>
     </p>
-    <blockquote style="text-align:center; margin-top:30px;">
-      💬 “Turning data into actionable insights — one dashboard at a time.”
-    </blockquote>
-  </section>
+  </div>
 
-  <script>
-    const toggle = document.getElementById("theme-toggle");
-    toggle.addEventListener("click", () => {
-      document.body.classList.toggle("light-mode");
-    });
-  </script>
+  <!-- 4. EXCEL BACKLOG -->
+  <div>
+    <h3>📦 Excel Backlog Dashboard | Excel</h3>
+    <img class="project-img" src="excel_backlog_dashboard.jpg" alt="Excel Backlog Dashboard">
+    <p>
+      An operational performance dashboard tracking order volume, backlog trends, delivery 
+      efficiency, and driver performance.  
+      The analysis helps logistics teams reduce delays, identify bottlenecks, and optimize 
+      workforce allocation.  
+      It also highlights daily fluctuations, enabling leadership to improve SLA compliance and 
+      customer satisfaction.
+      <br><a href="https://github.com/Psychizzy/EXCEL-BACKLOGS-ANALYSIS">🔗 View on GitHub</a>
+    </p>
+  </div>
+
+  <!-- 5. SQL CUSTOMER ANALYTICS -->
+  <div>
+    <h3>🧮 Customer Analytics (SQL)</h3>
+    <img class="project-img" src="customer_sql_query.png" alt="Customer Analytics SQL Query">
+    <p>
+      A complete SQL-driven analysis covering customer segmentation, behavioral trends, churn 
+      patterns, and revenue movement.  
+      The project identifies high-value customers, churn hotspots, and behavioral clusters that 
+      inform marketing strategy and retention actions.  
+      It enables data-driven decision-making for acquisition, retention, and lifetime value 
+      optimization.
+      <br><a href="https://github.com/Psychizzy/Customer-Analytics-SQL-Project">🔗 View on GitHub</a>
+    </p>
+  </div>
+
+  <!-- 6. COHORT ANALYSIS -->
+  <div>
+    <h3>📈 Customer Cohort & Retention Analysis | Power BI</h3>
+    <img class="project-img" src="customer_cohort_dashboard.png" alt="Customer Cohort Retention Dashboard">
+    <p>
+      A multi-layer cohort dashboard analyzing customer lifecycle, retention curves, RFM segments, 
+      and long-term engagement behavior.  
+      The insights help businesses understand repeat purchase patterns, identify high-value cohorts, 
+      and improve retention programs.  
+      It supports strategic decisions around customer reactivation, loyalty design, and LTV growth.
+      <br><a href="https://github.com/Psychizzy/customer-cohort-retention-powerbi">🔗 View on GitHub</a>
+    </p>
+  </div>
+
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <h2>⚙️ Skills & Tools</h2>
+
+  <p style="text-align:center; line-height:1.9; max-width:900px; margin:auto;">
+
+    <strong>Analysis & Visualization:</strong>  
+    Microsoft Excel (Advanced), Power BI (DAX, Modeling, Reports), Data Storytelling, Dashboard Development  
+    <br><br>
+
+    <strong>Databases:</strong>  
+    MySQL (Data Querying, Joins, Window Functions, Aggregations), PostgreSQL  
+    <br><br>
+
+    <strong>Data Analytics:</strong>  
+    Data Quality Assurance, Data Validation, Data Modeling, KPI Measurement, Customer Behavior Analysis  
+    (pattern detection, purchase drivers, retention signals), Advanced Segmentation (RFM Segmentation, cohort grouping, 
+    demographic/behavioral clustering), Trend Analysis, Insight Generation for Strategic Decision-Making  
+    <br><br>
+
+    <strong>Programming:</strong>  
+    Python (Pandas, NumPy, Scikit-learn, Seaborn, Matplotlib), Data Cleaning, Exploratory Data Analysis (EDA)  
+    <br><br>
+
+    <strong>Soft Skills:</strong>  
+    Problem-Solving, Critical Thinking, Effective Communication, Data-driven Decision Making, 
+    Team Collaboration, Attention to Detail, Analytical Reasoning
+  </p>
+</section>
+
+
+<!-- SERVICES -->
+<section id="services">
+  <h2>💼 Services I Offer</h2>
+  <ul style="max-width:700px; margin:auto; line-height:1.8;">
+    <li>Data Cleaning & Transformation (ETL)</li>
+    <li>Dashboard Design & Development (Power BI, Excel)</li>
+    <li>SQL Data Analysis & Reporting</li>
+    <li>Predictive & Behavioral Analytics</li>
+    <li>Data Storytelling & Business Insights</li>
+    <li>KPI Tracking & Executive Reporting</li>
+  </ul>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <h2>📬 Contact</h2>
+  <p style="text-align:center;">
+    📧 <a href="mailto:oluwaseyi1414@gmail.com">oluwaseyi1414@gmail.com</a><br>
+    🔗 <a href="https://www.linkedin.com/in/ajayi-oluwaseyi-865a35248">LinkedIn</a><br>
+    🐦 <a href="https://twitter.com/Psychizzy1414">Twitter</a><br>
+    📞 +2349035283723
+  </p>
+
+  <blockquote style="text-align:center; margin-top:30px;">
+    💬 “Turning data into actionable insights — one dashboard at a time.”
+  </blockquote>
+</section>
+
+<script>
+  const toggle = document.getElementById("theme-toggle");
+  toggle.addEventListener("click", () => {
+    document.body.classList.toggle("light-mode");
+  });
+</script>
+
 </body>
 </html>
