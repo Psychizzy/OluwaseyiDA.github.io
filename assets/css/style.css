@@ -180,3 +180,21 @@ body.light-mode .card {
   border-radius: 3px;
 }
 
+.cv-button {
+  background: var(--primary);
+  color: #fff;
+  padding: 12px 28px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s ease;
+  display: inline-block;
+  margin-top: 15px;
+  box-shadow: 0 0 12px rgba(0,188,212,0.4);
+}
+
+.cv-button:hover {
+  background: #02acc1;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0,188,212,0.5);
+}
