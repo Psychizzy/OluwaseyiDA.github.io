@@ -5,6 +5,10 @@
   --bg-card: #141d2f;      /* dark slate panels */
   --text-light: #e8f1f8;
   --text-dark: #1a1a1a;
+
+  /* Card Mode Compatibility */
+  --card-dark: #141d2f;
+  --card-light: #ffffff;
 }
 
 /* === GLOBAL STYLING === */
@@ -117,4 +121,53 @@ h2, h3 {
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(-10px); }
   to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===================================================================== */
+/* ======================= ADDED: ANIMATED CARD SYSTEM ================== */
+/* ===================================================================== */
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  margin-top: 35px;
+}
+
+.card {
+  background: var(--card-dark);
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 188, 212, 0.15);
+  box-shadow: 0 5px 18px rgba(0, 188, 212, 0.15);
+  transition: transform 0.35s ease, box-shadow 0.35s ease, background 0.35s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 28px rgba(0, 188, 212, 0.35);
+}
+
+body.light-mode .card {
+  background: var(--card-light);
+  border: 1px solid #dcdcdc;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+body.light-mode .card:hover {
+  box-shadow: 0 12px 30px rgba(0,0,0,0.18);
+}
+
+.card h3 {
+  text-align: left;
+  margin-top: 0;
+  color: var(--primary);
+}
+
+.divider {
+  width: 60px;
+  height: 3px;
+  background: var(--primary);
+  border-radius: 3px;
+  margin: 10px 0 18px 0;
 }
