@@ -5,10 +5,6 @@
   --bg-card: #141d2f;      /* dark slate panels */
   --text-light: #e8f1f8;
   --text-dark: #1a1a1a;
-
-  /* Card Mode Compatibility */
-  --card-dark: #141d2f;
-  --card-light: #ffffff;
 }
 
 /* === GLOBAL STYLING === */
@@ -123,51 +119,64 @@ h2, h3 {
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* ===================================================================== */
-/* ======================= ADDED: ANIMATED CARD SYSTEM ================== */
-/* ===================================================================== */
+
+
+/* ============================================================
+   === ADDED: ANIMATED CARD SYSTEM FOR SKILLS / SERVICES / CONTACT ===
+   ============================================================ */
 
 .card-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 25px;
-  margin-top: 35px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+  max-width: 900px;
+  margin: 25px auto;
+}
+
+@media (max-width: 780px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .card {
-  background: var(--card-dark);
-  padding: 25px;
-  border-radius: 12px;
-  border: 1px solid rgba(0, 188, 212, 0.15);
-  box-shadow: 0 5px 18px rgba(0, 188, 212, 0.15);
-  transition: transform 0.35s ease, box-shadow 0.35s ease, background 0.35s ease;
+  background: rgba(255,255,255,0.03);
+  padding: 20px;
+  border-radius: 14px;
+  border: 1px solid rgba(0, 188, 212, 0.10);
+  transition: transform 0.32s ease, box-shadow 0.32s ease, background 0.32s ease;
+  min-height: 110px;
+}
+
+body.light-mode .card {
+  background: #ffffff;
+  border: 1px solid rgba(0,0,0,0.08);
 }
 
 .card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 12px 28px rgba(0, 188, 212, 0.35);
+  box-shadow: 0 12px 30px rgba(0, 188, 212, 0.18);
 }
 
-body.light-mode .card {
-  background: var(--card-light);
-  border: 1px solid #dcdcdc;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
-
-body.light-mode .card:hover {
-  box-shadow: 0 12px 30px rgba(0,0,0,0.18);
-}
-
-.card h3 {
-  text-align: left;
-  margin-top: 0;
+.card h4 {
+  margin: 0 0 10px 0;
   color: var(--primary);
+  font-size: 1.05rem;
+  text-align: left;
+  font-weight: 600;
 }
 
-.divider {
-  width: 60px;
-  height: 3px;
-  background: var(--primary);
-  border-radius: 3px;
-  margin: 10px 0 18px 0;
+.card p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.55;
 }
+
+.card .divider {
+  width: 55px;
+  height: 4px;
+  background: var(--primary);
+  margin: 8px 0 14px 0;
+  border-radius: 3px;
+}
+
