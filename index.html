@@ -4,231 +4,39 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Ajayi Oluwaseyi | Data Analyst Portfolio</title>
+
+  <!-- Link to external stylesheet -->
   <link rel="stylesheet" href="assets/css/style.css">
 
+  <!-- Small inline safety styles kept (optional) -->
   <style>
-    /* Keep your original small inline styles and card styles (these are minimal duplicates of the stylesheet to ensure functionality if needed) */
-
     :root {
       --primary: #00e6f6;
       --bg-dark: #0a0f1f;
-      --bg-light: #f9fafc;
       --text-light: #eaeaea;
       --text-dark: #1a1a1a;
     }
-
-    body {
-      background-color: var(--bg-dark);
-      color: var(--text-light);
-      font-family: "Segoe UI", Roboto, sans-serif;
-      margin: 0;
-      transition: background 0.5s, color 0.5s;
-    }
-
-    body.light-mode {
-      background-color: var(--bg-light);
-      color: var(--text-dark);
-    }
-
-    /* NAVBAR (top center links remain) */
-    nav {
-      background: rgba(5, 10, 20, 0.9);
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      padding: 15px 0;
-      position: sticky;
-      top: 0;
-      z-index: 999;
-      box-shadow: 0 2px 8px rgba(0,188,212,0.2);
-    }
-
-    nav a {
-      color: var(--primary);
-      font-weight: 600;
-      text-transform: uppercase;
-      transition: color 0.3s, transform 0.3s;
-    }
-
-    nav a:hover {
-      color: #05d5f3;
-      transform: translateY(-2px);
-    }
-
-    /* HEADSHOT */
-    #headshot {
-      display: block;
-      margin: 40px auto 25px auto;
-      width: 260px;
-      height: 260px;
-      object-fit: cover;
-      border-radius: 50%;
-      border: 4px solid var(--primary);
-      transition: transform 0.4s ease, box-shadow 0.4s ease;
-    }
-
-    #headshot:hover {
-      transform: scale(1.08);
-      box-shadow: 0 0 25px rgba(0, 230, 246, 0.4);
-    }
-
-    h1, h2, h3 {
-      text-align: center;
-      color: var(--primary);
-      margin-bottom: 15px;
-    }
-
-    section {
-      padding: 60px 25px;
-      animation: fadeIn 1.2s ease;
-      max-width: 950px;
-      margin: 0 auto;
-    }
-
-    p, ul {
-      line-height: 1.7;
-      font-size: 1.05rem;
-    }
-
-    /* PROJECT IMAGES */
-    img.project-img {
-      display: block;
-      margin: 20px auto;
-      border-radius: 10px;
-      max-width: 100%;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    img.project-img:hover {
-      transform: scale(1.03);
-      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
-    }
-
-    /* TOGGLE BUTTON */
-    #theme-toggle {
-      position: fixed;
-      top: 15px;
-      right: 25px;
-      background-color: var(--primary);
-      border: none;
-      color: #0a0f1f;
-      border-radius: 6px;
-      padding: 8px 14px;
-      cursor: pointer;
-      font-weight: 600;
-      transition: background 0.3s, transform 0.3s;
-      z-index: 1000;
-    }
-
-    #theme-toggle:hover {
-      transform: scale(1.1);
-      background-color: #05d5f3;
-    }
-
-    /* ANIMATION */
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    /* small helper for project grid if stylesheet not loaded yet */
-    .projects-grid { display:grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-top: 18px;}
-    @media (max-width: 780px) { .projects-grid { grid-template-columns: 1fr; } }
-
-    .project-card {
-      background: rgba(255,255,255,0.03);
-      padding: 18px;
-      border-radius: 12px;
-      border: 1px solid rgba(0, 230, 246, 0.08);
-      transition: transform 0.32s ease, box-shadow 0.32s ease;
-    }
-    .project-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 12px 30px rgba(0, 230, 246, 0.12);
-    }
-
-    /* Hamburger button (top-left) */
-    .hamburger {
-      position: fixed;
-      top: 12px;
-      left: 18px;
-      width: 44px;
-      height: 44px;
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.03);
-      border-radius: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      z-index: 1100;
-      cursor: pointer;
-    }
-    .hamburger .bar { width:20px; height:2px; background:var(--primary); box-shadow: 0 4px 0 var(--primary); position:relative; }
-    .hamburger:hover { transform: scale(1.04); }
-
-    /* Slide-out panel */
-    .side-panel {
-      position: fixed;
-      top: 0;
-      left: -320px;
-      width: 320px;
-      height: 100%;
-      background: rgba(10,14,22,0.98);
-      box-shadow: 8px 0 30px rgba(0,0,0,0.6);
-      z-index: 1200;
-      padding: 28px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      transition: left 0.35s ease;
-    }
-    .side-panel.open { left: 0; }
-
-    .side-panel nav a {
-      display: block;
-      color: var(--text-light);
-      font-weight: 600;
-      margin: 14px 0;
-      text-decoration: none;
-      font-size: 1.05rem;
-    }
-    .side-panel nav a:hover { color: var(--primary); }
-
-    .side-panel .socials { margin-top: 24px; border-top: 1px solid rgba(255,255,255,0.04); padding-top: 16px; }
-    .side-panel .socials a { display:inline-block; color:var(--text-light); text-decoration:none; margin-right:12px; font-weight:600; }
-    .side-panel .close-btn { background: transparent; border: none; color:var(--text-light); font-size:1.2rem; cursor:pointer; align-self:flex-end; }
-
-    /* overlay behind panel */
-    .overlay {
-      position: fixed;
-      inset: 0;
-      background: rgba(0,0,0,0.45);
-      z-index: 1150;
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.25s ease;
-    }
-    .overlay.open { opacity: 1; pointer-events: all; }
-
+    body { background-color: var(--bg-dark); color: var(--text-light); font-family: "Segoe UI", Roboto, sans-serif; margin:0; transition:background .4s;color .4s; }
   </style>
 </head>
-
 <body>
 
-  <!-- HAMBURGER -->
-  <button class="hamburger" id="hamburger" aria-label="Open menu" title="Open menu">
-    <span class="bar" aria-hidden="true"></span>
+  <!-- HAMBURGER: top-left visible button -->
+  <button id="hamburger" class="hamburger" aria-label="Open menu" title="Open menu">
+    <span class="bar bar-top"></span>
+    <span class="bar bar-mid"></span>
+    <span class="bar bar-bot"></span>
   </button>
 
-  <!-- SIDE PANEL (hidden by default) -->
-  <aside class="side-panel" id="sidePanel" aria-hidden="true" role="dialog" aria-label="Site navigation">
+  <!-- SIDE PANEL (hidden off-screen by default) -->
+  <aside id="sidePanel" class="side-panel" aria-hidden="true" role="dialog" aria-label="Site navigation">
     <div>
-      <button class="close-btn" id="panelClose" aria-label="Close menu">✕</button>
+      <button id="panelClose" class="close-btn" aria-label="Close menu">✕</button>
 
-      <nav aria-label="Primary">
+      <nav aria-label="Primary" class="panel-nav">
         <a href="#home" class="panel-link">Home</a>
         <a href="#home" class="panel-link">About</a>
-        <a href="#projects" class="panel-link">Projects</a>
+        <a href="#projects" class="panel-link">Impactful Analytics Portfolio</a>
         <a href="#skills" class="panel-link">Skills</a>
         <a href="#services" class="panel-link">Services</a>
         <a href="#resume" class="panel-link">My Resume</a>
@@ -237,26 +45,19 @@
     </div>
 
     <div class="socials">
-      <div style="margin-bottom:8px; color:rgba(255,255,255,0.7); font-weight:600;">Connect</div>
+      <div style="margin-bottom:8px; color:rgba(255,255,255,0.75); font-weight:600;">Connect</div>
       <a href="https://www.linkedin.com/in/ajayi-oluwaseyi-865a35248" target="_blank" rel="noopener">LinkedIn</a>
       <a href="https://twitter.com/Psychizzy1414" target="_blank" rel="noopener">Twitter</a>
     </div>
   </aside>
 
-  <!-- Overlay -->
-  <div class="overlay" id="overlay"></div>
+  <!-- Overlay (covers page when side panel open) -->
+  <div id="overlay" class="overlay" aria-hidden="true"></div>
 
-  <!-- Theme toggle button -->
+  <!-- Theme toggle (keeps the same location on top-right) -->
   <button id="theme-toggle">🌙 Toggle Mode</button>
 
-  <!-- top center nav (kept as original) -->
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#projects">Projects</a>
-    <a href="#skills">Skills</a>
-    <a href="#services">Services</a>
-    <a href="#contact">Contact</a>
-  </nav>
+  <!-- REMOVED top-centered nav (the hamburger is now the single navigation control) -->
 
   <!-- HOME -->
   <section id="home">
@@ -271,7 +72,6 @@
       all levels. Passionate about leveraging data to solve real-world problems, improve decision-making, and uncover insights 
       that reveal both operational realities and customer behavior patterns in fast-paced environments.
     </p>
-
   </section>
 
   <!-- PROJECTS -->
@@ -279,250 +79,112 @@
     <h2>Impactful Analytics Portfolio</h2>
 
     <div class="projects-grid">
-
-      <!-- 1. TENANT RETENTION -->
+      <!-- keep all project cards unchanged -->
       <article class="project-card">
         <h3>🏢 Tenant Retention Optimization | Power BI</h3>
         <img class="project-img" src="tenant_retention_dashboard.png" alt="Tenant Retention Dashboard">
-        <p>
-          A retention intelligence dashboard for a real-estate company analyzing tenant churn, 
-          satisfaction, and lease renewal patterns.  
-          The project helps property managers identify high-risk tenants, understand factors driving 
-          dissatisfaction, and forecast revenue at risk.  
-          It supports proactive decision-making with measurable retention interventions and operational 
-          improvements.
-          <br><a href="https://github.com/Psychizzy/RealEstate-Tenant-Retention-Optimization">🔗 View on GitHub</a>
-        </p>
+        <p> A retention intelligence dashboard for a real-estate company analyzing tenant churn, satisfaction, and lease renewal patterns. The project helps property managers identify high-risk tenants, understand factors driving dissatisfaction, and forecast revenue at risk. It supports proactive decision-making with measurable retention interventions and operational improvements.
+        <br><a href="https://github.com/Psychizzy/RealEstate-Tenant-Retention-Optimization">🔗 View on GitHub</a></p>
       </article>
 
-      <!-- 2. SOFT DRINK -->
       <article class="project-card">
         <h3>🥤 Soft Drink Market Insight – Alimosho, Lagos | Power BI</h3>
         <img class="project-img" src="page1_overview.png" alt="Soft Drink Market Dashboard">
-        <p>
-          A full market-mapping and distribution intelligence dashboard built from field survey data.  
-          The report uncovers product availability, brand dominance, packaging preference, outlet 
-          performance, and geographical hotspots across Alimosho.  
-          It provides actionable insights that help distributors optimize re-supply frequency, improve 
-          stock reliability, expand into underserved coldspots, and tailor packaging strategy by outlet 
-          type.
-          <br><a href="https://github.com/Psychizzy/Soft-Drink-Market-Insight-Alimosho-Lagos">🔗 View on GitHub</a>
-        </p>
+        <p> A full market-mapping and distribution intelligence dashboard built from field survey data. The report uncovers product availability, brand dominance, packaging preference, outlet performance, and geographical hotspots across Alimosho. It provides actionable insights that help distributors optimize re-supply frequency, improve stock reliability, expand into underserved coldspots, and tailor packaging strategy by outlet type.
+        <br><a href="https://github.com/Psychizzy/Soft-Drink-Market-Insight-Alimosho-Lagos">🔗 View on GitHub</a></p>
       </article>
 
-      <!-- 3. AIRBNB -->
       <article class="project-card">
         <h3>🏨 Airbnb NYC Market Analysis | Power BI</h3>
         <img class="project-img" src="airbnb_dashboard.png" alt="Airbnb NYC Dashboard">
-        <p>
-          A market intelligence dashboard analyzing price patterns, occupancy behavior, host 
-          performance, and neighborhood competitiveness across NYC.  
-          This project empowers property owners and investors to make pricing decisions, maximize 
-          occupancy, and identify high-performing locations.  
-          It reveals revenue opportunities, booking patterns, and neighborhood-level demand insights.
-          <br><a href="https://github.com/Psychizzy/Airbnb-NYC-Data-Analysis-">🔗 View on GitHub</a>
-        </p>
+        <p> A market intelligence dashboard analyzing price patterns, occupancy behavior, host performance, and neighborhood competitiveness across NYC. This project empowers property owners and investors to make pricing decisions, maximize occupancy, and identify high-performing locations. It reveals revenue opportunities, booking patterns, and neighborhood-level demand insights.
+        <br><a href="https://github.com/Psychizzy/Airbnb-NYC-Data-Analysis-">🔗 View on GitHub</a></p>
       </article>
 
-      <!-- 4. EXCEL BACKLOG -->
       <article class="project-card">
         <h3>📦 Excel Backlog Dashboard | Excel</h3>
         <img class="project-img" src="excel_backlog_dashboard.jpg" alt="Excel Backlog Dashboard">
-        <p>
-          An operational performance dashboard tracking order volume, backlog trends, delivery 
-          efficiency, and driver performance.  
-          The analysis helps logistics teams reduce delays, identify bottlenecks, and optimize 
-          workforce allocation.  
-          It also highlights daily fluctuations, enabling leadership to improve SLA compliance and 
-          customer satisfaction.
-          <br><a href="https://github.com/Psychizzy/EXCEL-BACKLOGS-ANALYSIS">🔗 View on GitHub</a>
-        </p>
+        <p> An operational performance dashboard tracking order volume, backlog trends, delivery efficiency, and driver performance. The analysis helps logistics teams reduce delays, identify bottlenecks, and optimize workforce allocation. It also highlights daily fluctuations, enabling leadership to improve SLA compliance and customer satisfaction.
+        <br><a href="https://github.com/Psychizzy/EXCEL-BACKLOGS-ANALYSIS">🔗 View on GitHub</a></p>
       </article>
 
-      <!-- 5. SQL CUSTOMER ANALYTICS -->
       <article class="project-card">
         <h3>🧮 Customer Analytics (SQL)</h3>
         <img class="project-img" src="customer_sql_query.png" alt="Customer Analytics SQL Query">
-        <p>
-          A complete SQL-driven analysis covering customer segmentation, behavioral trends, churn 
-          patterns, and revenue movement.  
-          The project identifies high-value customers, churn hotspots, and behavioral clusters that 
-          inform marketing strategy and retention actions.  
-          It enables data-driven decision-making for acquisition, retention, and lifetime value 
-          optimization.
-          <br><a href="https://github.com/Psychizzy/Customer-Analytics-SQL-Project">🔗 View on GitHub</a>
-        </p>
+        <p> A complete SQL-driven analysis covering customer segmentation, behavioral trends, churn patterns, and revenue movement. The project identifies high-value customers, churn hotspots, and behavioral clusters that inform marketing strategy and retention actions. It enables data-driven decision-making for acquisition, retention, and lifetime value optimization.
+        <br><a href="https://github.com/Psychizzy/Customer-Analytics-SQL-Project">🔗 View on GitHub</a></p>
       </article>
 
-      <!-- 6. COHORT ANALYSIS -->
       <article class="project-card">
         <h3>📈 Customer Cohort & Retention Analysis | Power BI</h3>
         <img class="project-img" src="customer_cohort_dashboard.png" alt="Customer Cohort Retention Dashboard">
-        <p>
-          A multi-layer cohort dashboard analyzing customer lifecycle, retention curves, RFM segments, 
-          and long-term engagement behavior.  
-          The insights help businesses understand repeat purchase patterns, identify high-value cohorts, 
-          and improve retention programs.  
-          It supports strategic decisions around customer reactivation, loyalty design, and LTV growth.
-          <br><a href="https://github.com/Psychizzy/customer-cohort-retention-powerbi">🔗 View on GitHub</a>
-        </p>
+        <p> A multi-layer cohort dashboard analyzing customer lifecycle, retention curves, RFM segments, and long-term engagement behavior. The insights help businesses understand repeat purchase patterns, identify high-value cohorts, and improve retention programs. It supports strategic decisions around customer reactivation, loyalty design, and LTV growth.
+        <br><a href="https://github.com/Psychizzy/customer-cohort-retention-powerbi">🔗 View on GitHub</a></p>
       </article>
 
-    </div> <!-- /projects-grid -->
+    </div><!-- /projects-grid -->
   </section>
 
-  <!-- SKILLS -->
+  <!-- SKILLS (cards kept the same) -->
   <section id="skills">
     <h2>⚙️ Skills & Tools</h2>
-
     <div class="card-grid">
-      <div class="card">
-        <h4>Analysis & Visualization:</h4>
-        <div class="divider"></div>
-        <p>Leveraging Microsoft Excel and Power BI to analyze datasets, build dashboards, track KPIs, uncover trends, 
-        and communicate insights effectively.</p>
-      </div>
-
-      <div class="card">
-        <h4>Databases:</h4>
-        <div class="divider"></div>
-        <p>Querying, filtering, joining, and transforming data using MySQL — applying CTEs, window functions, subqueries, 
-        and optimized SQL scripts for analytics and reporting.</p>
-      </div>
-
-      <div class="card">
-        <h4>Data Analytics:</h4>
-        <div class="divider"></div>
-        <p>Executing data quality checks, validating datasets, modeling relationships, performing EDA, cleaning and transforming 
-        raw data, identifying key patterns, conducting root-cause analysis, and generating insights that support 
-        strategic decision-making.</p>
-      </div>
-
-      <div class="card">
-        <h4>Programming:</h4>
-        <div class="divider"></div>
-        <p>Utilizing Python (Pandas, NumPy, Scikit-Learn, Matplotlib, Seaborn) to automate workflows, analyze large datasets, 
-        create visual reports, and support data-driven solutions.</p>
-      </div>
-
-      <div class="card">
-        <h4>Soft Skills:</h4>
-        <div class="divider"></div>
-        <p>Demonstrating strong problem-solving, applying critical thinking, communicating insights clearly, collaborating with teams, 
-        and ensuring accuracy through attention to detail.</p>
-      </div>
-    </div>
-
-  <!-- SERVICES -->
-  <section id="services">
-    <h2>💼 Services I Offer</h2>
-
-    <div class="card-grid">
-      <div class="card">
-        <h4>Data Cleaning & Transformation (ETL)</h4>
-        <div class="divider"></div>
-        <p>Data Cleaning & Transformation (ETL)</p>
-      </div>
-
-      <div class="card">
-        <h4>Dashboard Design & Development (Power BI, Excel)</h4>
-        <div class="divider"></div>
-        <p>Dashboard Design & Development (Power BI, Excel)</p>
-      </div>
-
-      <div class="card">
-        <h4>SQL Data Analysis & Reporting</h4>
-        <div class="divider"></div>
-        <p>SQL Data Analysis & Reporting</p>
-      </div>
-
-      <div class="card">
-        <h4>Predictive & Behavioral Analytics</h4>
-        <div class="divider"></div>
-        <p>Predictive & Behavioral Analytics</p>
-      </div>
-
-      <div class="card">
-        <h4>Data Storytelling & Business Insights</h4>
-        <div class="divider"></div>
-        <p>Data Storytelling & Business Insights</p>
-      </div>
-
-      <div class="card">
-        <h4>KPI Tracking & Executive Reporting</h4>
-        <div class="divider"></div>
-        <p>KPI Tracking & Executive Reporting</p>
-      </div>
+      <div class="card"><h4>Analysis & Visualization:</h4><div class="divider"></div><p>Leveraging Microsoft Excel and Power BI to analyze datasets, build dashboards, track KPIs, uncover trends, and communicate insights effectively.</p></div>
+      <div class="card"><h4>Databases:</h4><div class="divider"></div><p>Querying, filtering, joining, and transforming data using MySQL — applying CTEs, window functions, subqueries, and optimized SQL scripts for analytics and reporting.</p></div>
+      <div class="card"><h4>Data Analytics:</h4><div class="divider"></div><p>Executing data quality checks, validating datasets, modeling relationships, performing EDA, cleaning and transforming raw data, identifying key patterns, conducting root-cause analysis, and generating insights that support strategic decision-making.</p></div>
+      <div class="card"><h4>Programming:</h4><div class="divider"></div><p>Utilizing Python (Pandas, NumPy, Scikit-Learn, Matplotlib, Seaborn) to automate workflows, analyze large datasets, create visual reports, and support data-driven solutions.</p></div>
+      <div class="card"><h4>Soft Skills:</h4><div class="divider"></div><p>Demonstrating strong problem-solving, applying critical thinking, communicating insights clearly, collaborating with teams, and ensuring accuracy through attention to detail.</p></div>
     </div>
   </section>
 
-    </section>
-    
-  <!-- RESUME CARD SECTION -->
+  <!-- RESUME -->
   <section id="resume">
     <h2>📄 My Resume</h2>
-
     <div class="card-grid">
-
       <div class="card">
         <h4>Download My CV</h4>
         <div class="divider"></div>
         <p>You can download my updated resume by clicking the button below.</p>
-
-        <a 
-          href="https://docs.google.com/document/d/1rNNeHR9HT1bJtCMT7jjD8Fru9sV58MJzjMw97ahInvc/export?format=pdf"
-          class="cv-button"
-          download>
-          📥 Download CV
-        </a>
+        <a href="https://docs.google.com/document/d/1rNNeHR9HT1bJtCMT7jjD8Fru9sV58MJzjMw97ahInvc/export?format=pdf" class="cv-button" download>📥 Download CV</a>
       </div>
+    </div>
+  </section>
 
+  <!-- SERVICES -->
+  <section id="services">
+    <h2>💼 Services I Offer</h2>
+    <div class="card-grid">
+      <div class="card"><h4>Data Cleaning & Transformation (ETL)</h4><div class="divider"></div><p>Data Cleaning & Transformation (ETL)</p></div>
+      <div class="card"><h4>Dashboard Design & Development (Power BI, Excel)</h4><div class="divider"></div><p>Dashboard Design & Development (Power BI, Excel)</p></div>
+      <div class="card"><h4>SQL Data Analysis & Reporting</h4><div class="divider"></div><p>SQL Data Analysis & Reporting</p></div>
+      <div class="card"><h4>Predictive & Behavioral Analytics</h4><div class="divider"></div><p>Predictive & Behavioral Analytics</p></div>
+      <div class="card"><h4>Data Storytelling & Business Insights</h4><div class="divider"></div><p>Data Storytelling & Business Insights</p></div>
+      <div class="card"><h4>KPI Tracking & Executive Reporting</h4><div class="divider"></div><p>KPI Tracking & Executive Reporting</p></div>
     </div>
   </section>
 
   <!-- CONTACT -->
   <section id="contact">
     <h2>📬 Contact</h2>
-
     <div class="card-grid">
-      <div class="card">
-        <h4>Email</h4>
-        <div class="divider"></div>
-        <p>📧 <a href="mailto:oluwaseyi1414@gmail.com">oluwaseyi1414@gmail.com</a></p>
-      </div>
-
-      <div class="card">
-        <h4>LinkedIn</h4>
-        <div class="divider"></div>
-        <p>🔗 <a href="https://www.linkedin.com/in/ajayi-oluwaseyi-865a35248">LinkedIn</a></p>
-      </div>
-
-      <div class="card">
-        <h4>Twitter</h4>
-        <div class="divider"></div>
-        <p>🐦 <a href="https://twitter.com/Psychizzy1414">Twitter</a></p>
-      </div>
-
-      <div class="card">
-        <h4>Phone</h4>
-        <div class="divider"></div>
-        <p>📞 +2349035283723</p>
-      </div>
+      <div class="card"><h4>Email</h4><div class="divider"></div><p>📧 <a href="mailto:oluwaseyi1414@gmail.com">oluwaseyi1414@gmail.com</a></p></div>
+      <div class="card"><h4>LinkedIn</h4><div class="divider"></div><p>🔗 <a href="https://www.linkedin.com/in/ajayi-oluwaseyi-865a35248">LinkedIn</a></p></div>
+      <div class="card"><h4>Twitter</h4><div class="divider"></div><p>🐦 <a href="https://twitter.com/Psychizzy1414">Twitter</a></p></div>
+      <div class="card"><h4>Phone</h4><div class="divider"></div><p>📞 +2349035283723</p></div>
     </div>
 
-    <blockquote style="text-align:center; margin-top:30px;">
-      💬 “Turning data into actionable insights — one dashboard at a time.”
-    </blockquote>
+    <blockquote style="text-align:center; margin-top:30px;">💬 “Turning data into actionable insights — one dashboard at a time.”</blockquote>
   </section>
 
+  <!-- JavaScript -->
   <script>
-    // Theme toggle
+    // Theme toggle (unchanged)
     const toggle = document.getElementById("theme-toggle");
     toggle.addEventListener("click", () => {
       document.body.classList.toggle("light-mode");
     });
 
-    // Hamburger menu behavior
+    // Panel controls
     const hamburger = document.getElementById('hamburger');
     const sidePanel = document.getElementById('sidePanel');
     const overlay = document.getElementById('overlay');
@@ -533,7 +195,6 @@
       sidePanel.classList.add('open');
       overlay.classList.add('open');
       sidePanel.setAttribute('aria-hidden', 'false');
-      // trap focus: set focus to first link
       if (panelLinks[0]) panelLinks[0].focus();
     }
     function closePanel() {
@@ -543,11 +204,14 @@
       hamburger.focus();
     }
 
-    hamburger.addEventListener('click', openPanel);
+    hamburger.addEventListener('click', () => {
+      // toggle
+      if (sidePanel.classList.contains('open')) closePanel(); else openPanel();
+    });
     panelClose.addEventListener('click', closePanel);
     overlay.addEventListener('click', closePanel);
 
-    // Close when any panel link clicked and do smooth scroll
+    // Smooth scroll + close panel when link clicked
     panelLinks.forEach(link => {
       link.addEventListener('click', (e) => {
         e.preventDefault();
@@ -559,11 +223,10 @@
       });
     });
 
-    // Close panel on Escape key
+    // Keyboard escape
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') closePanel();
     });
-
   </script>
 
 </body>
