@@ -61,7 +61,8 @@
 
   <!-- HOME -->
   <section id="home">
-    <h1>👋 Hi, I’m Ajayi Oluwaseyi</h1>
+    <h1>Ajayi Oluwaseyi</h1>
+<h2 class="typing"></h2>
     <img id="headshot" src="headshot.jpg" alt="Ajayi Oluwaseyi Headshot">
 
     <p style="text-align:center; max-width:850px; margin:auto; line-height:1.8;">
@@ -313,6 +314,45 @@
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') closePanel();
     });
+
+    // Dynamic typing effect
+const roles = [
+  "Data Analyst",
+  "Business Intelligence Professional",
+  "SQL • Power BI • Excel",
+  "Data Storytelling & Insights",
+  "Turning Data into Strategic Decisions"
+];
+
+let roleIndex = 0;
+let charIndex = 0;
+const typingElement = document.querySelector(".typing");
+
+function typeEffect() {
+  if (charIndex < roles[roleIndex].length) {
+    typingElement.textContent += roles[roleIndex].charAt(charIndex);
+    charIndex++;
+    setTimeout(typeEffect, 70);
+  } else {
+    setTimeout(eraseEffect, 2000);
+  }
+}
+
+function eraseEffect() {
+  if (charIndex > 0) {
+    typingElement.textContent = roles[roleIndex].substring(0, charIndex - 1);
+    charIndex--;
+    setTimeout(eraseEffect, 40);
+  } else {
+    roleIndex++;
+    if (roleIndex >= roles.length) roleIndex = 0;
+    setTimeout(typeEffect, 300);
+  }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  if (typingElement) typeEffect();
+});
   </script>
 
 </body>
