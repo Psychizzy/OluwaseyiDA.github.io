@@ -91,3 +91,16 @@ img.project-img:hover{ transform:scale(1.04); box-shadow:0 10px 30px rgba(0,188,
   .side-panel{ width:86%; left:-110%; }
   .side-panel.open{ left:0; }
 }
+
+/* ===============================
+   Dynamic Typing Title
+   =============================== */
+
+.typing{
+  text-align:center;
+  color:var(--primary);
+  font-size:1.4rem;
+  margin-top:10px;
+  font-weight:600;
+  min-height:30px;
+}
